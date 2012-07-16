@@ -1,0 +1,16 @@
+<p>This information will also be sent to you in an e-mail</p>
+<?php
+//						 0		1		  2			 3
+// $infoarray = array($total,$items,$giftMessage,$address)
+$infoarray = $this->getAllProductsFromOrder($this->getOrderId());
+$order_total = $infoarray[0];
+$order_items = $infoarray[1];
+$order_gift_message = $infoarray[2];
+$order_address = $infoarray[3];	
+?>
+<p>Order Total: <?php echo Mage::helper('core')->currency($order_total); ?></p>
+<?php foreach($order_items as $item): $product = Mage::getModel('catalog/product')->load($item->getProductId()); ?>
+<p>Product Name: <?php echo $item->getQtyOrdered(); ?>x <?php echo $product->getName(); ?></p>
+<?php endforeach; ?>
+<p>Gift Message: <?php echo $order_gift_message->getMessage(); ?></p>
+<p>Address: <?php echo $order_address; ?></p>

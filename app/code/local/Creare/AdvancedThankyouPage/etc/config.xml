@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+      <modules>
+        <Creare_AdvancedThankyouPage>
+          <version>0.1.0</version>
+        </Creare_AdvancedThankyouPage>
+      </modules>
+    <frontend>
+      <routers>
+        <!--<advancedthankyoupage>
+          <use>standard</use>
+         <args>
+           <module>Creare_AdvancedThankyouPage</module>
+           <frontName>advancedthankyoupage</frontName>
+         </args>
+        </advancedthankyoupage>-->
+      </routers>
+	  <layout>
+          <updates>
+              <advancedthankyoupage>
+                  <file>advancedthankyoupage.xml</file>
+              </advancedthankyoupage>
+          </updates>
+      </layout>
+    </frontend>
+   <global>   
+      <blocks>   
+         <advancedthankyoupage><class>Creare_AdvancedThankyouPage_Block</class></advancedthankyoupage>   
+      </blocks>   
+   </global>   
+</config> 

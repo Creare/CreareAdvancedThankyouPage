@@ -1,0 +1,12 @@
+<?xml version="1.0"?>   
+<layout version="1.0">		   
+	<checkout_onepage_success translate="label">		
+		<block type="advancedthankyoupage/index" name="order_details" template="advancedthankyoupage/order.phtml"/> 
+		<reference name="content">
+			<remove name="checkout.success"/>
+			<block type="advancedthankyoupage/index" name="advancedthankyoupage_index" template="advancedthankyoupage/index.phtml"> 
+				<block type="advancedthankyoupage/order" name="order_details" template="advancedthankyoupage/order.phtml"/> 
+			</block>  
+		</reference>
+    </checkout_onepage_success>  
+</layout>
